@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<gms-header></gms-header>
+
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    <gms-sidebar></gms-sidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<gms-footer></gms-footer>
