@@ -1,7 +1,7 @@
-<gms-header></gms-header>
+<gms-header (sidebarToggle)="toggleSidebar()"></gms-header>
 
 <mat-drawer-container>
-  <mat-drawer mode="side" opened>
+  <mat-drawer mode="side" [opened]="sidebarOpen">
     <gms-sidebar></gms-sidebar>
   </mat-drawer>
   <mat-drawer-content>

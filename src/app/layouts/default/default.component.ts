@@ -8,10 +8,16 @@ import {Title} from "@angular/platform-browser";
 })
 export class DefaultComponent implements OnInit {
 
+  sidebarOpen = true;
+
   constructor(private titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('GDPR Management System')
+    this.titleService.setTitle('GDPR Management System');
+  }
+
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
   }
 
 }
