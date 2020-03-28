@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from "@angular/platform-browser";
-import {TranslateService} from "@ngx-translate/core";
-import {LocalStorageService} from "../../util/local-storage.service";
+import {Title} from '@angular/platform-browser';
+import {TranslateService} from '@ngx-translate/core';
+import {LocalStorageService} from '../../util/local-storage.service';
 
 @Component({
   selector: 'gms-default',

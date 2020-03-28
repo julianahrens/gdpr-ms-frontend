@@ -13,7 +13,7 @@ export class LocalStorageService {
   }
 
   getItem(key: string, defaultValue?: string): string {
-    let result: string | null = localStorage.getItem(key);
+    const result: string | null = localStorage.getItem(key);
     if (result) {
       return result;
     }
