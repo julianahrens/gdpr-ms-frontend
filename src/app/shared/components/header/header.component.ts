@@ -8,6 +8,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() sidebarToggle: EventEmitter<any> = new EventEmitter<any>();
+  @Output() selectedLanguage: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class HeaderComponent implements OnInit {
 
   toggleSidebar() {
     this.sidebarToggle.emit();
+  }
+
+  useLanguage(lang: string) {
+    this.selectedLanguage.emit(lang);
   }
 
 }

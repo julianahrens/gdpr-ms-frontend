@@ -1,0 +1,10 @@
+{
+  "general": {
+    "title": "DSGVO Management System",
+    "rightsReserved": "Alle Rechte vorbehalten"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "processingActivities": "Verarbeitungsverzeichnis"
+  }
+}

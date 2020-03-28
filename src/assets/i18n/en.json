@@ -1,0 +1,10 @@
+{
+  "general": {
+    "title": "GDPR Management System",
+    "rightsReserved": "All rights reserved"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "processingActivities": "Processing Activities"
+  }
+}
