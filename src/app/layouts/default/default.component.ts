@@ -20,7 +20,8 @@ export class DefaultComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translate.setDefaultLang(this.storage.getItem('lang', 'en'));
+    this.translate.setDefaultLang('en');
+    this.translate.use(this.storage.getItem('lang', 'en'));
     this.updateTitle();
   }
 
