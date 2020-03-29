@@ -48,7 +48,7 @@ describe('FooterComponent', () => {
   });
 
   it('should load translations', async () => {
-    let compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.debugElement.nativeElement;
 
     // the DOM should have the id for now since the translations haven't been rendered yet
     expect(compiled.querySelector('#legal').textContent).toEqual('general.rightsReserved');
@@ -78,7 +78,7 @@ describe('FooterComponent', () => {
   });
 
   it('get actual year', async () => {
-    let compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.debugElement.nativeElement;
 
     // should have right year in variable
     expect(component.year).toEqual(new Date().getFullYear());

@@ -48,7 +48,7 @@ describe('SidebarComponent', () => {
   });
 
   it('should load translations for dashboard item', async () => {
-    let compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.debugElement.nativeElement;
 
     // the DOM should have the id for now since the translations haven't been rendered yet
     expect(compiled.querySelector('#dashboard').textContent).toEqual('navigation.dashboard');
@@ -78,7 +78,7 @@ describe('SidebarComponent', () => {
   });
 
   it('should load translations for processing-activities item', async () => {
-    let compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.debugElement.nativeElement;
 
     // the DOM should have the id for now since the translations haven't been rendered yet
     expect(compiled.querySelector('#processing-activities').textContent).toEqual('navigation.processingActivities');

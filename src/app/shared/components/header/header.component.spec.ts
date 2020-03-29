@@ -52,7 +52,7 @@ describe('HeaderComponent', () => {
   });
 
   it('should load translations', async () => {
-    let compiled = fixture.debugElement.nativeElement;
+    const compiled = fixture.debugElement.nativeElement;
 
     // the DOM should have the id for now since the translations haven't been rendered yet
     expect(compiled.querySelector('mat-toolbar mat-toolbar-row span').textContent).toEqual('general.title');
