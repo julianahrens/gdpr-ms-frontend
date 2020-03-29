@@ -15,11 +15,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleSidebar() {
+  toggleSidebar(): void {
     this.sidebarToggle.emit();
   }
 
-  useLanguage(lang: string) {
+  useLanguage(lang: string): void {
     this.selectedLanguage.emit(lang);
   }
 

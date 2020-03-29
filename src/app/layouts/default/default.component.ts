@@ -25,17 +25,17 @@ export class DefaultComponent implements OnInit {
     this.updateTitle();
   }
 
-  toggleSidebar() {
+  toggleSidebar(): void {
     this.sidebarOpen = !this.sidebarOpen;
   }
 
-  changeLanguage(lang: string) {
+  changeLanguage(lang: string): void {
     this.translate.use(lang);
     this.updateTitle();
     this.storage.setItem('lang', lang);
   }
 
-  private updateTitle() {
+  private updateTitle(): void {
     this.translate.get('general.title').subscribe(
       (value: string) => this.titleService.setTitle(value)
     );

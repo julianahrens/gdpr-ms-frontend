@@ -81,4 +81,22 @@ describe('HeaderComponent', () => {
     expect(compiled.querySelector('mat-toolbar mat-toolbar-row span').textContent).toEqual(TRANSLATION_DE.general.title);
   });
 
+  it('should emit sidebar toggle', async () => {
+    let emited = false;
+    component.sidebarToggle.subscribe(() => emited = true);
+
+    component.toggleSidebar();
+
+    expect(emited).toBeTrue();
+  });
+
+  it('should emit language change', async () => {
+    let language = '';
+    component.selectedLanguage.subscribe((value) => language = value);
+
+    component.useLanguage('test');
+
+    expect(language).toEqual('test');
+  });
+
 });
