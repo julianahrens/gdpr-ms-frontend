@@ -1,0 +1,32 @@
+name: Update dependencies
+on:
+  schedule:
+    cron: '0 2 * * *'
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ${{ matrix.node }}
+        uses: action/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: npm install
+        run: |
+          npm ci
+          npm install -g @angular/cli
+
+      - name: Update dependencies
+        run: npm run update
+
+      - name: Push to repo
+        run: git push

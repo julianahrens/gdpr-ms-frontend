@@ -4,14 +4,15 @@
   "scripts": {
     "ng": "ng",
     "clean": "rimraf ./dist",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test --watch=false --codeCoverage=true --browsers=ChromeHeadlessCustom",
     "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:ci": "npm run clean && npm run test && npm run build:prod"
+    "build:ci": "npm run clean && npm run test && npm run build:prod",
+    "update": "ng update --all=true --createCommits=true --force=true"
   },
   "private": true,
   "dependencies": {
