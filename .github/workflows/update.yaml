@@ -1,26 +1,27 @@
-name: Update dependencies
+name: Dependency updater
 on:
+  push:
+    branches:
+      - 'build/**'
   schedule:
-    - cron: '* 2 * * *'
+    - cron: '* 2 * * * '
 
 jobs:
-  update:
-    name: Update
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: ${{ matrix.node }}
-        uses: action/setup-node@v1
+      - name: Node ${{ matrix.node }}
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
 
-      - name: npm install
+      - name: npm install and installing angular cli
         run: |
           npm ci
           npm install -g @angular/cli
@@ -28,5 +29,5 @@ jobs:
       - name: Update dependencies
         run: npm run update
 
-      - name: Push to repo
+      - name: Push commit if available
         run: git push
