@@ -21,10 +21,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: npm install and installing angular cli
-        run: |
-          npm ci
-          npm install -g @angular/cli
+      - name: npm install
+        run: npm ci
 
       - name: Update dependencies
         run: npm run update
