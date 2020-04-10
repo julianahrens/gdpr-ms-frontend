@@ -1,1 +1,19 @@
-<p>list works!</p>
+<h2>{{ 'processing-activities.list.title' | translate }}</h2>
+
+<mat-list>
+  <mat-list-item *ngFor="let activity of activities">
+    <h3 matLine>{{ activity.name }}</h3>
+    <p matLine>{{ 'processing-activities.list.createdAt' | translate }} {{ activity.createdAt | date: 'dd/MM/yyyy' }} | {{ 'processing-activities.list.updatedAt' | translate }} {{ activity.updatedAt | date: 'dd/MM/yyyy' }}</p>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <button mat-icon-button>
+        <mat-icon>visibility</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-list-item>
+</mat-list>

@@ -7,6 +7,8 @@
       "@layouts/*": ["app/layouts/*"],
       "@modules/*": ["app/modules/*"],
       "@shared/*": ["app/shared/*"],
+      "@services/*": ["app/shared/services/*"],
+      "@models/*": ["app/shared/models/*"],
       "@assets/*": ["assets/*"],
       "@i18n/*": ["assets/i18n/*"],
       "@env/*": ["environments/*"]

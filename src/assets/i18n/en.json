@@ -6,5 +6,12 @@
   "navigation": {
     "dashboard": "Dashboard",
     "processingActivities": "Processing Activities"
+  },
+  "processing-activities": {
+    "list": {
+      "title": "Directory of Processing Activities",
+      "createdAt": "Created at",
+      "updatedAt": "Updated at"
+    }
   }
 }

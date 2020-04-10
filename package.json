@@ -8,7 +8,7 @@
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test --watch=false --codeCoverage=true --browsers=ChromeHeadlessCustom",
-    "test:watch": "ng test",
+    "test:watch": "ng test --codeCoverage=true",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:ci": "npm run clean && npm run test && npm run build:prod",
@@ -53,6 +53,7 @@
     "puppeteer": "^2.1.1",
     "ts-node": "~8.8.2",
     "tslint": "~6.1.1",
+    "typemoq": "^2.1.0",
     "typescript": "~3.8.3"
   }
 }
